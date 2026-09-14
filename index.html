@@ -1,157 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <script>
-(function(njzd){
-var d = document,
-    s = d.createElement('script'),
-    l = d.currentScript || d.scripts[d.scripts.length - 1];
-s.settings = njzd || {};
-s.src = "\/\/funny-tooth.com\/c.Di9\/6qba2\/5ZlwSUW-Q-9bNKz-Q\/yXNPDSQu3MNIy\/0C3QNiDBIH0\/NdDBgdxx";
-s.async = true;
-s.referrerPolicy = 'no-referrer-when-downgrade';
-l.parentNode.insertBefore(s, l);
-})({})
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Carreras Coin</title>
- <meta name="5b6f40aa4c405d9e33d22aeeb6474eaba55a07de" content="5b6f40aa4c405d9e33d22aeeb6474eaba55a07de" />
+<meta name="5b6f40aa4c405d9e33d22aeeb6474eaba55a07de" content="5b6f40aa4c405d9e33d22aeeb6474eaba55a07de" />
 <style>
-  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; }
-  body {
-    margin: 0;
-    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
-    background: radial-gradient(circle at 50% -10%, #232a3a 0%, #0d0f14 60%);
-    color: #f2f2f2;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  #topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 14px;
-    background: linear-gradient(180deg, #232a38, #171b24);
-    border-bottom: 1px solid #2f3648;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-    flex-shrink: 0;
-    position: relative;
-    z-index: 5;
-  }
-  #topbar .stat { display:flex; align-items:center; gap:6px; font-weight:600; font-size:15px; }
-  #topbar .coin { color:#ffcf4d; }
-  #topbar .lvl { color:#7fd1ff; }
-  #screens { flex:1; position:relative; overflow:hidden; }
-  .screen {
-    position:absolute; inset:0;
-    padding:18px 16px 90px;
-    overflow-y:auto;
-    display:none;
-  }
-  .screen.active { display:block; }
-  h2 { margin:0 0 4px; font-size:19px; font-weight:600; }
-  p.sub { margin:0 0 16px; color:#9aa3b2; font-size:13px; }
-  .card {
-    background: linear-gradient(155deg, #212837, #171b24);
-    border:1px solid #313a4d;
-    border-radius:16px;
-    padding:14px;
-    margin-bottom:12px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
-  }
-  .car-visual {
-    width:100%; height:130px; border-radius:16px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:64px;
-    margin-bottom:10px;
-    position: relative;
-    box-shadow: inset 0 0 40px rgba(255,207,77,0.08);
-  }
-  .car-visual span { animation: floaty 2.6s ease-in-out infinite; filter: drop-shadow(0 10px 12px rgba(0,0,0,0.5)); }
-  button {
-    font-family:inherit; border:none; border-radius:10px;
-    padding:12px 16px; font-size:15px; font-weight:600;
-    cursor:pointer;
-  }
-  .btn-primary {
-    background: linear-gradient(160deg, #ffe083, #ffcf4d 55%, #f0a93a);
-    color:#1b1500; width:100%;
-    box-shadow: 0 4px 14px rgba(255,207,77,0.35), inset 0 1px 0 rgba(255,255,255,0.5);
-  }
-  .btn-primary:active { transform:scale(0.98); }
-  .btn-primary:disabled { background:#3a3f4a; color:#7a808c; }
-  .btn-ghost { background:transparent; border:1px solid #3a3f4a; color:#f2f2f2; }
-  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-  .car-item {
-    background: linear-gradient(155deg, #212837, #171b24);
-    border:1px solid #313a4d; border-radius:14px;
-    padding:10px; text-align:center;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-  }
-  .car-item.locked { opacity:0.5; }
-  .car-item .cvis { height:46px; margin-bottom:6px; animation: floaty 2.6s ease-in-out infinite; }
-  .car-item .cvis svg { width:100%; height:100%; }
-  @keyframes floaty { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-6px);} }
-  .car-item .cname { font-size:13px; font-weight:600; }
-  .car-item .creq { font-size:11px; color:#9aa3b2; margin-top:2px; }
-  .car-item.selected { border-color:#ffcf4d; box-shadow: 0 0 0 1px #ffcf4d, 0 6px 16px rgba(255,207,77,0.25); }
-  .progress-bar { height:8px; background:#2a3040; border-radius:5px; overflow:hidden; margin:6px 0; }
-  .progress-fill { height:100%; background:#7fd1ff; }
-  .task {
-    display:flex; justify-content:space-between; align-items:center;
-    background:#1b2029; border:1px solid #2a3040; border-radius:12px;
-    padding:12px; margin-bottom:10px;
-  }
-  .task .info { font-size:13px; }
-  .task .reward { color:#ffcf4d; font-size:12px; margin-top:2px; }
-  .task button { padding:8px 12px; font-size:13px; }
-  #navbar {
-    position:absolute; left:0; right:0; bottom:0;
-    display:flex; background:#161a22; border-top:1px solid #2a3040;
-    padding:6px 4px calc(6px + env(safe-area-inset-bottom));
-  }
-  .navbtn {
-    flex:1; background:none; border:none; color:#7a808c;
-    display:flex; flex-direction:column; align-items:center; gap:2px;
-    font-size:11px; padding:6px 0; border-radius:10px;
-  }
-  .navbtn.active { color:#ffcf4d; }
-  .navbtn .ic { font-size:20px; }
-  #gameWrap { position:relative; width:100%; height:100%; }
-  #gameCanvas { display:block; background:#3a3f47; touch-action:none; }
-  #gameOverlay {
-    position:absolute; inset:0; display:none;
-    align-items:center; justify-content:center; flex-direction:column;
-    background:rgba(10,12,16,0.85); text-align:center; padding:20px;
-  }
-  #gameOverlay.show { display:flex; }
-  #gameOverlay h3 { margin:0 0 6px; font-size:20px; }
-  #gameOverlay p { margin:0 0 16px; color:#c7cdd8; font-size:14px; }
-  #hud {
-    position:absolute; top:10px; left:0; right:0; display:flex;
-    justify-content:space-between; padding:0 14px; font-weight:700;
-    font-size:15px; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,0.6);
-    pointer-events:none;
-  }
-  #startOverlay {
-    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-    flex-direction:column; background:rgba(10,12,16,0.75); text-align:center; padding:20px;
-  }
-</style><script src="https://telegram.org/js/telegram-web-app.js"></script>
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; }
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at 50% -10%, #232a3a 0%, #0d0f14 60%);
+  color: #f2f2f2;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, #232a38, #171b24);
+  border-bottom: 1px solid #2f3648;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+}
+#topbar .stat { display:flex; align-items:center; gap:6px; font-weight:600; font-size:15px; }
+#topbar .coin { color:#ffcf4d; }
+#topbar .lvl { color:#7fd1ff; }
+#screens { flex:1; position:relative; overflow:hidden; }
+.screen {
+  position:absolute; inset:0;
+  padding:18px 16px 90px;
+  overflow-y:auto;
+  display:none;
+}
+.screen.active { display:block; }
+h2 { margin:0 0 4px; font-size:19px; font-weight:600; }
+p.sub { margin:0 0 16px; color:#9aa3b2; font-size:13px; }
+.card {
+  background: linear-gradient(155deg, #212837, #171b24);
+  border:1px solid #313a4d;
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.car-visual {
+  width:100%; height:130px; border-radius:16px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:64px;
+  margin-bottom:10px;
+  position: relative;
+  box-shadow: inset 0 0 40px rgba(255,207,77,0.08);
+}
+.car-visual span { animation: floaty 2.6s ease-in-out infinite; filter: drop-shadow(0 10px 12px rgba(0,0,0,0.5)); }
+button {
+  font-family:inherit; border:none; border-radius:10px;
+  padding:12px 16px; font-size:15px; font-weight:600;
+  cursor:pointer;
+}
+.btn-primary {
+  background: linear-gradient(160deg, #ffe083, #ffcf4d 55%, #f0a93a);
+  color:#1b1500; width:100%;
+  box-shadow: 0 4px 14px rgba(255,207,77,0.35), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+.btn-primary:active { transform:scale(0.98); }
+.btn-primary:disabled { background:#3a3f4a; color:#7a808c; }
+.btn-ghost { background:transparent; border:1px solid #3a3f4a; color:#f2f2f2; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.car-item {
+  background: linear-gradient(155deg, #212837, #171b24);
+  border:1px solid #313a4d; border-radius:14px;
+  padding:10px; text-align:center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+.car-item.locked { opacity:0.5; }
+.car-item .cvis { height:46px; margin-bottom:6px; animation: floaty 2.6s ease-in-out infinite; }
+.car-item .cvis svg { width:100%; height:100%; }
+@keyframes floaty { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-6px);} }
+.car-item .cname { font-size:13px; font-weight:600; }
+.car-item .creq { font-size:11px; color:#9aa3b2; margin-top:2px; }
+.car-item .cstats { font-size:10px; color:#7fd1ff; margin-top:3px; }
+.car-item.selected { border-color:#ffcf4d; box-shadow: 0 0 0 1px #ffcf4d, 0 6px 16px rgba(255,207,77,0.25); }
+.progress-bar { height:8px; background:#2a3040; border-radius:5px; overflow:hidden; margin:6px 0; }
+.progress-fill { height:100%; background:#7fd1ff; }
+.task {
+  display:flex; justify-content:space-between; align-items:center;
+  background:#1b2029; border:1px solid #2a3040; border-radius:12px;
+  padding:12px; margin-bottom:10px;
+}
+.task .info { font-size:13px; }
+.task .reward { color:#ffcf4d; font-size:12px; margin-top:2px; }
+.task button { padding:8px 12px; font-size:13px; }
+#navbar {
+  position:absolute; left:0; right:0; bottom:0;
+  display:flex; background:#161a22; border-top:1px solid #2a3040;
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom));
+}
+.navbtn {
+  flex:1; background:none; border:none; color:#7a808c;
+  display:flex; flex-direction:column; align-items:center; gap:2px;
+  font-size:11px; padding:6px 0; border-radius:10px;
+}
+.navbtn.active { color:#ffcf4d; }
+.navbtn .ic { font-size:20px; }
+#gameWrap { position:relative; width:100%; height:100%; }
+#gameCanvas { display:block; background:#3a3f47; touch-action:none; }
+#gameOverlay {
+  position:absolute; inset:0; display:none;
+  align-items:center; justify-content:center; flex-direction:column;
+  background:rgba(10,12,16,0.85); text-align:center; padding:20px;
+}
+#gameOverlay.show { display:flex; }
+#gameOverlay h3 { margin:0 0 6px; font-size:20px; }
+#gameOverlay p { margin:0 0 16px; color:#c7cdd8; font-size:14px; }
+#hud {
+  position:absolute; top:10px; left:0; right:0; display:flex;
+  justify-content:space-between; padding:0 14px; font-weight:700;
+  font-size:15px; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,0.6);
+  pointer-events:none;
+}
+#startOverlay {
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  flex-direction:column; background:rgba(10,12,16,0.75); text-align:center; padding:20px;
+}
+</style>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
 </head>
 <body>
-
 <div id="topbar">
   <div class="stat coin"><span>&#128176;</span><span id="coinCount">0</span></div>
   <div class="stat lvl">Nivel <span id="lvlCount">1</span></div>
 </div>
 
 <div id="screens">
-
   <div class="screen" id="screen-inicio">
     <h2>Tu carro</h2>
     <p class="sub">Corre, esquiva y suma monedas para desbloquear más carros.</p>
@@ -229,7 +217,6 @@ l.parentNode.insertBefore(s, l);
       </div>
     </div>
   </div>
-
 </div>
 
 <div id="navbar">
@@ -240,12 +227,19 @@ l.parentNode.insertBefore(s, l);
 </div>
 
 <script>
+// Cada carro ahora tiene stats reales:
+// speedBonus: reduce cuánto sube la velocidad con la distancia (más control)
+// coinMult: multiplica las monedas ganadas en cada carrera
 const CARS = [
-  {id:'starter', name:'Rookie GT', emoji:'\u{1F697}', color:'#4a90d9', reqLevel:1},
-  {id:'rosso1', name:'Rosso Veloce', emoji:'\u{1F3CE}', color:'#d92b2b', reqLevel:2},
-  {id:'rosso2', name:'Rosso Corsa', emoji:'\u{1F3CE}', color:'#e13a3a', reqLevel:4},
-  {id:'rosso3', name:'Scuderia RS', emoji:'\u{1F3CE}', color:'#f04444', reqLevel:6},
-  {id:'rosso4', name:'Rosso Leggenda', emoji:'\u{1F3CE}', color:'#ff5050', reqLevel:9},
+  {id:'starter',  name:'Rookie GT',        emoji:'\u{1F697}', color:'#4a90d9', reqLevel:1, speedBonus:0,    coinMult:1.0},
+  {id:'azulRay',  name:'Azul Ray',         emoji:'\u{1F3CE}', color:'#2b8fd9', reqLevel:2, speedBonus:0.15, coinMult:1.05},
+  {id:'verdeFury',name:'Verde Furia',      emoji:'\u{1F3CE}', color:'#2fbf6a', reqLevel:3, speedBonus:0.10, coinMult:1.15},
+  {id:'rosso1',   name:'Rosso Veloce',     emoji:'\u{1F3CE}', color:'#d92b2b', reqLevel:4, speedBonus:0.25, coinMult:1.10},
+  {id:'moradoNight',name:'Morado Noche',   emoji:'\u{1F3CE}', color:'#8a3ad9', reqLevel:6, speedBonus:0.20, coinMult:1.25},
+  {id:'rosso2',   name:'Rosso Corsa',      emoji:'\u{1F3CE}', color:'#e13a3a', reqLevel:8, speedBonus:0.35, coinMult:1.20},
+  {id:'oroLuxe',  name:'Oro de Lujo',      emoji:'\u{1F3CE}', color:'#e0a52e', reqLevel:10,speedBonus:0.30, coinMult:1.35},
+  {id:'rosso3',   name:'Scuderia RS',      emoji:'\u{1F3CE}', color:'#f04444', reqLevel:13,speedBonus:0.45, coinMult:1.30},
+  {id:'rosso4',   name:'Rosso Leggenda',   emoji:'\u{1F3CE}', color:'#ff5050', reqLevel:16,speedBonus:0.55, coinMult:1.50},
 ];
 
 function carIconSVG(color, sporty){
@@ -269,8 +263,8 @@ let state = {
   coins: 0,
   xp: 0,
   level: 1,
-  selectedCar: 'sedan',
-  unlockedCars: ['sedan'],
+  selectedCar: 'starter',
+  unlockedCars: ['starter'],
   lastDailyClaim: 0,
   playsToday: 0,
   playsTodayDate: '',
@@ -280,6 +274,7 @@ let state = {
   maxEnergy: 5,
   lastEnergyTime: Date.now(),
 };
+
 const ENERGY_REGEN_MS = 15*60*1000;
 const STREAK_REWARDS = [30,40,50,70,90,120,200];
 
@@ -390,15 +385,18 @@ function showScreen(name){
   document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active', b.dataset.s===name));
   if(name!=='jugar'){ stopGame(); }
 }
-
 function goPlay(){ showScreen('jugar'); }
+
+function currentCar(){
+  return CARS.find(c=>c.id===state.selectedCar) || CARS[0];
+}
 
 function renderAll(){
   document.getElementById('coinCount').textContent = state.coins;
   document.getElementById('lvlCount').textContent = state.level;
   document.getElementById('walletCoins').textContent = state.coins;
 
-  const car = CARS.find(c=>c.id===state.selectedCar) || CARS[0];
+  const car = currentCar();
   document.getElementById('homeCarVisual').style.background = car.color+'33';
   document.getElementById('homeCarVisual').innerHTML = '<span style="width:80%">'+carIconSVG(car.color, car.id!=='starter')+'</span>';
   document.getElementById('homeCarName').textContent = car.name;
@@ -416,7 +414,8 @@ function renderAll(){
     if(unlocked && !state.unlockedCars.includes(c.id)) state.unlockedCars.push(c.id);
     const div = document.createElement('div');
     div.className = 'car-item'+(unlocked?'':' locked')+(state.selectedCar===c.id?' selected':'');
-    div.innerHTML = '<div class="cvis">'+carIconSVG(c.color, c.id!=='starter')+'</div><div class="cname">'+c.name+'</div><div class="creq">'+(unlocked?'Disponible':'Nivel '+c.reqLevel)+'</div>';
+    const statsHtml = '<div class="cstats">+'+Math.round(c.speedBonus*100)+'% control &middot; x'+c.coinMult.toFixed(2)+' monedas</div>';
+    div.innerHTML = '<div class="cvis">'+carIconSVG(c.color, c.id!=='starter')+'</div><div class="cname">'+c.name+'</div><div class="creq">'+(unlocked?'Disponible':'Nivel '+c.reqLevel)+'</div>'+(unlocked?statsHtml:'');
     if(unlocked){ div.onclick = ()=>{ state.selectedCar = c.id; saveState(); renderAll(); }; }
     grid.appendChild(div);
   });
@@ -461,7 +460,6 @@ function renderAll(){
 }
 
 const BOT_USERNAME = "TurboCoinBot";
-
 function shareGame(){
   const botLink = "https://t.me/" + BOT_USERNAME;
   const text = "Jugué esto y gané monedas corriendo carros. Únete y juega:";
@@ -485,6 +483,15 @@ function claimDaily(){
   saveState(); renderAll();
 }
 
+function claimPlayTask(){
+  if(state.playsToday < 3) return;
+  if(state.playTaskClaimedDate === state.playsTodayDate) return;
+  sndCoin();
+  state.coins += 30;
+  state.playTaskClaimedDate = state.playsTodayDate;
+  saveState(); renderAll();
+}
+
 async function watchAd (){
   const overlay = document.createElement('div');
   overlay.style = 'position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;';
@@ -494,20 +501,16 @@ async function watchAd (){
   video.playsInline = true;
   overlay.appendChild(video);
   document.body.appendChild(overlay);
-
   try{
-    const res = await fetch('https://funny-tooth.com/ddm/FpzQd.GyNdvVZQGRUm/Xe/md9JuRZDUOl/kmP/TicI0UMEjtYr2CN-jqUntYNpzfQByGNRjgYc2fOhQp');
-    const text = await res.text();
-    const xml = new DOMParser().parseFromString(text, 'text/xml');
-    const mediaFile = xml.querySelector('MediaFile');
-    if(!mediaFile){ throw new Error('sin video'); }
-    video.src = mediaFile.textContent.trim();
-
-    video.onended = () => {
+    if(window.Adsgram){
       document.body.removeChild(overlay);
+      const AdController = window.Adsgram.init({ blockId: "YOUR_ADSGRAM_BLOCK_ID" });
+      await AdController.show();
       state.coins += 20;
       saveState(); renderAll();
-    };
+      return;
+    }
+    throw new Error('adsgram no disponible');
   } catch(e){
     document.body.removeChild(overlay);
     alert('No se pudo cargar el anuncio, intenta más tarde');
@@ -584,7 +587,6 @@ function stopGame(){
 function laneX(lane){ return lane*laneW + laneW/2; }
 
 let dragging = false, targetX = 0;
-
 function eventClientX(e){
   if(e.touches && e.touches.length) return e.touches[0].clientX;
   if(e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
@@ -608,7 +610,6 @@ function dragMove(e){
   if(e.cancelable) e.preventDefault();
 }
 function dragEnd(){ dragging = false; }
-
 canvas.addEventListener('touchstart', dragStart, {passive:false});
 canvas.addEventListener('touchmove', dragMove, {passive:false});
 canvas.addEventListener('touchend', dragEnd);
@@ -633,26 +634,23 @@ function spawnStuff(){
 
 function loop(){
   if(!running) return;
+  const car = currentCar();
 
   if(crashing){
     ctx.clearRect(0,0,W,H);
     const roadGrad = ctx.createLinearGradient(0,0,0,H);
     roadGrad.addColorStop(0, '#4a5262'); roadGrad.addColorStop(1, '#2c3138');
     ctx.fillStyle = roadGrad; ctx.fillRect(0,0,W,H);
-
     spinAngle += 0.55;
     spinFrames += 1;
     const cx = player.x, cy = player.y + player.h/2;
-
     ctx.save();
     ctx.translate(cx, cy);
     ctx.rotate(spinAngle);
-    const car = CARS.find(cc=>cc.id===state.selectedCar) || CARS[0];
     ctx.fillStyle = 'rgba(0,0,0,0.3)';
     ctx.beginPath(); ctx.ellipse(0, player.h/2-4, player.w*0.6, 11, 0, 0, Math.PI*2); ctx.fill();
     drawCar(0, -player.h/2, player.w, player.h, car.color);
     ctx.restore();
-
     ctx.strokeStyle = 'rgba(255,255,255,0.7)';
     ctx.lineWidth = 4;
     ctx.setLineDash([10,8]);
@@ -661,7 +659,6 @@ function loop(){
     ctx.arc(cx, cy, Math.max(player.w, player.h)*0.75, 0, Math.PI*2);
     ctx.stroke();
     ctx.setLineDash([]);
-
     for(let i=0;i<3;i++){
       const a = spinAngle*1.4 + i*(Math.PI*2/3);
       const sx = cx + Math.cos(a)*46;
@@ -670,7 +667,6 @@ function loop(){
       ctx.font = '20px sans-serif';
       ctx.fillText('\u2726', sx, sy);
     }
-
     if(spinFrames > 34){
       crashing = false;
       endRun();
@@ -679,9 +675,9 @@ function loop(){
     animId = requestAnimationFrame(loop);
     return;
   }
+
   ctx.clearRect(0,0,W,H);
   frameT += 1;
-
   const skyH = 50;
   const skyGrad = ctx.createLinearGradient(0,0,0,skyH);
   skyGrad.addColorStop(0, '#2a1b3d');
@@ -700,7 +696,7 @@ function loop(){
   roadGrad.addColorStop(1, '#2c3138');
   ctx.fillStyle = roadGrad;
   ctx.fillRect(0,skyH,W,H-skyH);
-  // acera lateral
+
   ctx.fillStyle = 'rgba(0,0,0,0.25)';
   ctx.fillRect(0,skyH,10,H-skyH);
   ctx.fillRect(W-10,skyH,10,H-skyH);
@@ -717,7 +713,8 @@ function loop(){
   }
   ctx.setLineDash([]);
 
-  speed = 4 + Math.min(6, dist/500);
+  // el speedBonus del carro suaviza la rampa de dificultad (más control a altas distancias)
+  speed = 4 + Math.min(6, dist/500) * (1 - car.speedBonus*0.5);
   dist += speed/10;
   spawnStuff();
 
@@ -766,7 +763,6 @@ function loop(){
     ctx.fill();
   });
 
-  const car = CARS.find(cc=>cc.id===state.selectedCar) || CARS[0];
   ctx.fillStyle = 'rgba(0,0,0,0.3)';
   ctx.beginPath();
   ctx.ellipse(player.x, player.y+player.h-4, player.w*0.6, 11, 0, 0, Math.PI*2);
@@ -775,7 +771,6 @@ function loop(){
   roundRect(player.x-player.w/2-3, player.y-3, player.w+6, player.h+6, 12);
   ctx.fill();
   drawCar(player.x, player.y, player.w, player.h, car.color);
-
 
   for(const o of obstacles){
     const ox = laneX(o.lane);
@@ -786,6 +781,7 @@ function loop(){
       return;
     }
   }
+
   coinsOnRoad = coinsOnRoad.filter(c=>{
     const cx = laneX(c.lane);
     if(c.y+12 > player.y && c.y-12 < player.y+player.h && Math.abs(cx-player.x) < 30){
@@ -818,13 +814,12 @@ function roundRect(x,y,w,h,r){
 
 function drawCar(cx, topY, w, h, color){
   const x = cx - w/2;
-  // ruedas
   ctx.fillStyle = '#1a1a1a';
   ctx.fillRect(x-4, topY+10, 8, 16);
   ctx.fillRect(x+w-4, topY+10, 8, 16);
   ctx.fillRect(x-4, topY+h-26, 8, 16);
   ctx.fillRect(x+w-4, topY+h-26, 8, 16);
-  // carrocería con degradado (le da volumen, no plano)
+
   const bodyGrad = ctx.createLinearGradient(x, topY, x+w, topY);
   bodyGrad.addColorStop(0, shadeColor(color, -35));
   bodyGrad.addColorStop(0.45, shadeColor(color, 25));
@@ -832,15 +827,15 @@ function drawCar(cx, topY, w, h, color){
   ctx.fillStyle = bodyGrad;
   roundRect(x, topY, w, h, 10);
   ctx.fill();
-  // brillo superior
+
   ctx.fillStyle = 'rgba(255,255,255,0.18)';
   roundRect(x+4, topY+2, w-8, h*0.18, 6);
   ctx.fill();
-  // parabrisas
+
   ctx.fillStyle = 'rgba(200,230,255,0.55)';
   roundRect(x+6, topY+10, w-12, h*0.32, 5);
   ctx.fill();
-  // luces traseras
+
   ctx.fillStyle = 'rgba(255,255,255,0.6)';
   ctx.fillRect(x+5, topY+h-8, 8, 4);
   ctx.fillRect(x+w-13, topY+h-8, 8, 4);
@@ -857,7 +852,8 @@ function shadeColor(hex, amt){
 
 function endRun(){
   running = false;
-  const total = coinsRun + Math.floor(dist/20);
+  const car = currentCar();
+  const total = Math.round((coinsRun + Math.floor(dist/20)) * car.coinMult);
   document.getElementById('resultText').textContent = 'Ganaste '+total+' monedas ('+Math.floor(dist)+'m recorridos)';
   document.getElementById('gameOverlay').classList.add('show');
   addXpAndCoins(total);
