@@ -487,27 +487,35 @@ function claimDaily(){
 
 const ADSGRAM_BLOCK_ID = "47543";
 let AdController = null;
-try{
-  if(window.Adsgram){
-    AdController = window.Adsgram.init({ blockId: ADSGRAM_BLOCK_ID });
-  }
-}catch(e){}
+try{async function verAnuncio(){
+  const overlay = document.createElement('div');
+  overlay.style = 'position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;';
+  const video = document.createElement('video');
+  video.style = 'max-width:100%;max-height:100%;';
+  video.autoplay = true;
+  video.playsInline = true;
+  overlay.appendChild(video);
+  document.body.appendChild(overlay);
 
-function watchAd(){
-  if(!AdController){
-    alert('Anuncios no configurados todavía. Pon tu blockId real de AdsGram en el código.');
-    return;
+  try{
+    const res = await fetch('https://funny-tooth.com/ddm/FpzQd.GyNdvVZQGRUm/Xe/md9JuRZDUOl/kmP/TicI0UMEjtYr2CN-jqUntYNpzfQByGNRjgYc2fOhQp');
+    const text = await res.text();
+    const xml = new DOMParser().parseFromString(text, 'text/xml');
+    const mediaFile = xml.querySelector('MediaFile');
+    if(!mediaFile){ throw new Error('sin video'); }
+    video.src = mediaFile.textContent.trim();
+
+    video.onended = () => {
+      document.body.removeChild(overlay);
+      estado.monedas += 20;
+      guardarEstado(); renderAll();
+    };
+  } catch(e){
+    document.body.removeChild(overlay);
+    alert('No se pudo cargar el anuncio, intenta más tarde');
   }
-  AdController.show().then(()=>{
-    state.coins += 20;
-    saveState(); renderAll();
-  }).catch(()=>{
-    // el usuario cerró el anuncio antes de tiempo o hubo un error: no se paga
-  });
 }
-
-function claimPlayTask(){
-  if(state.playsToday < 3 || state.playTaskClaimedDate===state.playsTodayDate) return;
+  
   state.coins += 30;
   state.playTaskClaimedDate = state.playsTodayDate;
   saveState(); renderAll();
