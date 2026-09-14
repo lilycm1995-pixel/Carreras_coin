@@ -485,9 +485,7 @@ function claimDaily(){
   saveState(); renderAll();
 }
 
-const ADSGRAM_BLOCK_ID = "47543";
-let AdController = null;
-try{async function verAnuncio(){
+async function verAnuncio(){
   const overlay = document.createElement('div');
   overlay.style = 'position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;';
   const video = document.createElement('video');
@@ -514,11 +512,6 @@ try{async function verAnuncio(){
     document.body.removeChild(overlay);
     alert('No se pudo cargar el anuncio, intenta más tarde');
   }
-}
-  
-  state.coins += 30;
-  state.playTaskClaimedDate = state.playsTodayDate;
-  saveState(); renderAll();
 }
 
 function addXpAndCoins(coinsEarned){
