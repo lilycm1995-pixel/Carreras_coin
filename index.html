@@ -505,7 +505,7 @@ async function verAnuncio(){
 
     video.onended = () => {
       document.body.removeChild(overlay);
-      estado.monedas += 20;
+      state.coins += 20;
       saveState(); renderAll();
     };
   } catch(e){
